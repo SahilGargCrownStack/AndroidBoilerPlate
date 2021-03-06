@@ -21,7 +21,7 @@ import javax.inject.Inject
 class MainFragment : BaseFragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun getInstance() = MainFragment()
     }
 
     private lateinit var fragmentBinding: MainFragmentBinding

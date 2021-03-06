@@ -10,6 +10,8 @@ dependencies {
     //Design
     implementation deps.design.constraintLayout
     implementation deps.design.material
+    implementation deps.navigation.main
+    implementation deps.navigation.ui
 
     //Lifecycle
     implementation deps.lifecycle.livedata
