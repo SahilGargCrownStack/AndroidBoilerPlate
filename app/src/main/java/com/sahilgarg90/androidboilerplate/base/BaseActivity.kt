@@ -1,4 +1,4 @@
-package com.sahilgarg90.androidboilerplate
+package com.sahilgarg90.androidboilerplate.base
 
 import android.annotation.TargetApi
 import android.content.pm.PackageManager
@@ -10,6 +10,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.sahilgarg90.androidboilerplate.utils.permissions.Permission
 import com.sahilgarg90.androidboilerplate.utils.permissions.PermissionCallback
+import com.sahilgarg90.androidboilerplate.utils.permissions.PermissionPreferences
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -24,6 +25,9 @@ open class BaseActivity : AppCompatActivity(), HasAndroidInjector {
 
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
+
+    @Inject
+    lateinit var permissionPreferences: PermissionPreferences
 
     private val permissionCallbackSparseArray = SparseArray<PermissionCallback>()
 
@@ -46,12 +50,14 @@ open class BaseActivity : AppCompatActivity(), HasAndroidInjector {
 
     @TargetApi(Build.VERSION_CODES.M)
     fun canRequestPermission(permission: Permission): Boolean {
-        return shouldShowRequestPermissionRationale(permission.permissionName)
+        return !permissionPreferences.isPermissionRequestedBefore(permission.permissionName)
+                || shouldShowRequestPermissionRationale(permission.permissionName)
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     fun requestPermission(permission: Permission, permissionCallback: PermissionCallback) {
         permissionCallbackSparseArray.put(permission.requestCode, permissionCallback)
+        permissionPreferences.setPermissionRequestedStatus(permission.permissionName)
         requestPermissions(arrayOf(permission.permissionName), permission.requestCode)
     }
 

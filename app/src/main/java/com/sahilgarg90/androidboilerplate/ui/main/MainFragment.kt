@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.sahilgarg90.androidboilerplate.BaseActivity
-import com.sahilgarg90.androidboilerplate.BaseFragment
+import com.sahilgarg90.androidboilerplate.base.BaseActivity
+import com.sahilgarg90.androidboilerplate.base.BaseFragment
 import com.sahilgarg90.androidboilerplate.R
 import com.sahilgarg90.androidboilerplate.ui.main.viewmodel.MainViewModel
 import com.sahilgarg90.androidboilerplate.utils.permissions.Permission

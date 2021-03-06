@@ -1,4 +1,4 @@
-package com.sahilgarg90.androidboilerplate
+package com.sahilgarg90.androidboilerplate.base
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,7 +1,7 @@
 package com.sahilgarg90.androidboilerplate.ui.main
 
 import android.os.Bundle
-import com.sahilgarg90.androidboilerplate.BaseActivity
+import com.sahilgarg90.androidboilerplate.base.BaseActivity
 import com.sahilgarg90.androidboilerplate.R
 
 /**

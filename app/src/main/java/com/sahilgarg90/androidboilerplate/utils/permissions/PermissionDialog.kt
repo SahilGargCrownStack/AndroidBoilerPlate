@@ -10,7 +10,7 @@ import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import androidx.core.content.ContextCompat
-import com.sahilgarg90.androidboilerplate.BaseActivity
+import com.sahilgarg90.androidboilerplate.base.BaseActivity
 import com.sahilgarg90.androidboilerplate.R
 import com.sahilgarg90.androidboilerplate.databinding.DialogPermissionBinding
 

@@ -2,7 +2,7 @@ package com.sahilgarg90.androidboilerplate.utils.permissions
 
 import android.os.Build
 import androidx.annotation.NonNull
-import com.sahilgarg90.androidboilerplate.BaseActivity
+import com.sahilgarg90.androidboilerplate.base.BaseActivity
 
 /**
  * Created by Sahil Garg on 06-03-2021.
