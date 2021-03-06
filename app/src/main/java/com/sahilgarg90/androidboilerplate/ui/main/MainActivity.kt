@@ -1,8 +1,10 @@
 package com.sahilgarg90.androidboilerplate.ui.main
 
 import android.os.Bundle
-import com.sahilgarg90.androidboilerplate.base.BaseActivity
+import androidx.databinding.DataBindingUtil
 import com.sahilgarg90.androidboilerplate.R
+import com.sahilgarg90.androidboilerplate.base.BaseActivity
+import com.sahilgarg90.androidboilerplate.databinding.MainActivityBinding
 
 /**
  * Created by Sahil Garg on 06-03-2021.
@@ -10,9 +12,12 @@ import com.sahilgarg90.androidboilerplate.R
 
 class MainActivity : BaseActivity() {
 
+    private lateinit var activityBinding: MainActivityBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
+        activityBinding = DataBindingUtil.setContentView(this, R.layout.main_activity)
+
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.container, MainFragment.newInstance())

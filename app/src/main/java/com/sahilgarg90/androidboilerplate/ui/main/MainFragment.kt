@@ -1,14 +1,13 @@
 package com.sahilgarg90.androidboilerplate.ui.main
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.sahilgarg90.androidboilerplate.R
 import com.sahilgarg90.androidboilerplate.base.BaseActivity
 import com.sahilgarg90.androidboilerplate.base.BaseFragment
+import com.sahilgarg90.androidboilerplate.databinding.MainFragmentBinding
 import com.sahilgarg90.androidboilerplate.ui.main.viewmodel.MainViewModel
 import com.sahilgarg90.androidboilerplate.utils.permissions.Permission
 import com.sahilgarg90.androidboilerplate.utils.permissions.PermissionManager
@@ -25,6 +24,8 @@ class MainFragment : BaseFragment() {
         fun newInstance() = MainFragment()
     }
 
+    private lateinit var fragmentBinding: MainFragmentBinding
+
     private lateinit var viewModel: MainViewModel
 
     @Inject
@@ -34,7 +35,8 @@ class MainFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+        fragmentBinding = MainFragmentBinding.inflate(inflater, container, false)
+        return fragmentBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
