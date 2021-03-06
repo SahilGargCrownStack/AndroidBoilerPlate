@@ -1,0 +1,13 @@
+ext.keys = [:]
+def keys = [:]
+
+keys.BASE_URL = "BASE_URL"
+ext.keys = keys
+
+def urls = [:]
+urls."$keys.BASE_URL" = "\"<API Base Url>\""
+ext.urls = urls
+
+def debug_urls = [:]
+debug_urls."$keys.BASE_URL" = "\"<API Base Url>\""
+ext.debug_urls = debug_urls

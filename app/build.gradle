@@ -1,3 +1,5 @@
+import com.android.build.gradle.api.BaseVariant
+
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
@@ -19,7 +21,15 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "java.util.Map<String,String>", "URLS_MAP", getBuildConfigMapEntry(urls)
         }
+        debug {
+            buildConfigField "java.util.Map<String,String>", "URLS_MAP", getBuildConfigMapEntry(debug_urls)
+        }
+    }
+    applicationVariants.all {
+        variant ->
+            printBuildConfigKeys(variant, keys)
     }
 
     buildFeatures {
@@ -36,3 +46,21 @@ android {
 }
 
 apply from: 'dependencies.gradle'
+
+static void printBuildConfigKeys(BaseVariant variant, LinkedHashMap[] maps) {
+    maps.each { map ->
+        map.each { key, value ->
+            variant.buildConfigField "String", "$key", "\"$value\""
+        }
+    }
+}
+
+static String getBuildConfigMapEntry(LinkedHashMap[] maps) {
+    StringBuilder putCommandForAll = new StringBuilder()
+    maps.each { map ->
+        map.each { key, value ->
+            putCommandForAll.append("put(\"$key\",$value);")
+        }
+    }
+    return "new java.util.HashMap() {{${putCommandForAll.toString()}}}"
+}

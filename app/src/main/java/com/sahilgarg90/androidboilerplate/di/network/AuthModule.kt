@@ -1,6 +1,7 @@
 package com.sahilgarg90.androidboilerplate.di.network
 
 import com.google.gson.Gson
+import com.sahilgarg90.androidboilerplate.BuildConfig
 import com.sahilgarg90.androidboilerplate.network.JSONArrayAdapter
 import com.sahilgarg90.androidboilerplate.network.JSONObjectAdapter
 import com.sahilgarg90.androidboilerplate.ui.auth.AuthNetworkAPI
@@ -29,7 +30,7 @@ class AuthModule {
             .create()
 
         return Retrofit.Builder()
-            .baseUrl("")
+            .baseUrl(BuildConfig.URLS_MAP[BuildConfig.BASE_URL] ?: "")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(updatedGson))
             .build().create(AuthNetworkAPI::class.java)
