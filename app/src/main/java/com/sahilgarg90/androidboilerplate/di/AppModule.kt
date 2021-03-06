@@ -2,6 +2,7 @@ package com.sahilgarg90.androidboilerplate.di
 
 import android.app.Application
 import android.content.Context
+import com.sahilgarg90.androidboilerplate.di.network.AuthModule
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -10,7 +11,7 @@ import javax.inject.Singleton
  * Created by Sahil Garg on 06-03-2021.
  */
 
-@Module(includes = [ViewModelModule::class])
+@Module(includes = [AuthModule::class])
 class AppModule {
 
     @Provides
