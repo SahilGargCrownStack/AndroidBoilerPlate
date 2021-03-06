@@ -15,4 +15,22 @@ dependencies {
     implementation deps.lifecycle.livedata
     implementation deps.lifecycle.viewmodel
 
+    //Dagger (Dependency Injection)
+    implementation deps.dagger.main
+    kapt deps.dagger.compiler
+    implementation deps.dagger.android
+    implementation deps.dagger.android_support
+    kapt deps.dagger.android_processor
+
+    //Chuck (HTTP Requests Inspector)
+    debugImplementation deps.chuck.library
+    releaseImplementation deps.chuck.library_no_op
+
+    //Retrofit (Making Network Calls)
+    implementation deps.retrofit.main
+    implementation deps.retrofit.gson
+
+    //Okhttp
+    implementation deps.okhttp.main
+    implementation deps.okhttp.httpInterceptor
 }
