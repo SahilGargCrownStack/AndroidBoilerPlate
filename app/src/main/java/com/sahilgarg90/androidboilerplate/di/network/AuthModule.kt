@@ -4,7 +4,7 @@ import com.google.gson.Gson
 import com.sahilgarg90.androidboilerplate.BuildConfig
 import com.sahilgarg90.androidboilerplate.network.JSONArrayAdapter
 import com.sahilgarg90.androidboilerplate.network.JSONObjectAdapter
-import com.sahilgarg90.androidboilerplate.ui.auth.AuthNetworkAPI
+import com.sahilgarg90.androidboilerplate.network.api.AuthNetworkAPI
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
