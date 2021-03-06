@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AndroidBoilerPlate</string>
+
+    <string name="continue_string">Continue</string>
+    <string name="not_now">Not now</string>
+    <string name="settings">Settings</string>
+
+    <string name="location_permission_pre_dialog_message">To show relevant information in your area, allow access to your device’s location.</string>
+    <string name="location_permission_denied_dialog_message">To show relevant information in your area, allow access to your device’s location. Tap on Settings > Permission, and turn Location on.</string>
+    <string name="storage_permission_pre_dialog_message">To easily receive and send photos, videos and other files, allow access to your device’s photos, media and files.</string>
+    <string name="storage_permission_denied_dialog_message">To send media, allow access to your device’s photos, media and files. Tap on Settings > Permission, and turn Storage on.</string>
 </resources>
