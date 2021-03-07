@@ -4,7 +4,7 @@ import com.google.gson.Gson
 import com.sahilgarg90.androidboilerplate.BuildConfig
 import com.sahilgarg90.androidboilerplate.network.JSONArrayAdapter
 import com.sahilgarg90.androidboilerplate.network.JSONObjectAdapter
-import com.sahilgarg90.androidboilerplate.network.api.auth.AuthNetworkAPI
+import com.sahilgarg90.androidboilerplate.network.api.main.MainNetworkAPI
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -15,15 +15,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 /**
- * Created by Sahil Garg on 06-03-2021.
+ * Created by Sahil Garg on 07-03-2021.
  */
 
 @Module
-class AuthModule {
+class MainModule {
 
     @Provides
     @Singleton
-    fun provideAuthNetworkAPI(client: OkHttpClient, gson: Gson): AuthNetworkAPI {
+    fun provideMainNetworkAPI(client: OkHttpClient, gson: Gson): MainNetworkAPI {
         val updatedGson = gson.newBuilder().setLenient()
             .registerTypeAdapter(JSONObject::class.java, JSONObjectAdapter.sInstance)
             .registerTypeAdapter(JSONArray::class.java, JSONArrayAdapter.sInstance)
@@ -33,6 +33,6 @@ class AuthModule {
             .baseUrl(BuildConfig.URLS_MAP[BuildConfig.BASE_URL] ?: "")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(updatedGson))
-            .build().create(AuthNetworkAPI::class.java)
+            .build().create(MainNetworkAPI::class.java)
     }
 }

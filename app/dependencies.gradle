@@ -35,4 +35,8 @@ dependencies {
     //Okhttp
     implementation deps.okhttp.main
     implementation deps.okhttp.httpInterceptor
+
+    //RX
+    implementation deps.rxJava.main
+    implementation deps.rxJava.android
 }

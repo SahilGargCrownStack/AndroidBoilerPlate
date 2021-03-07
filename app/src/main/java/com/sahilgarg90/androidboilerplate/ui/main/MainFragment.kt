@@ -1,9 +1,11 @@
 package com.sahilgarg90.androidboilerplate.ui.main
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.sahilgarg90.androidboilerplate.base.BaseActivity
 import com.sahilgarg90.androidboilerplate.base.BaseFragment
@@ -21,6 +23,8 @@ import javax.inject.Inject
 class MainFragment : BaseFragment() {
 
     companion object {
+        private const val TAG = "MainFragment"
+
         fun getInstance() = MainFragment()
     }
 
@@ -43,8 +47,19 @@ class MainFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
+
+        viewModel.someData.observe(viewLifecycleOwner, Observer { data ->
+            // Receives the data information whenever it got changed
+            Log.d(TAG, data)
+        })
+
+        // Call the view model method to get some information
+        viewModel.getSomeData()
     }
 
+    /**
+     * Method demonstrating how to call out for runtime permissions
+     */
     private fun getStoragePermission() {
         PermissionManager.performTaskWithPermission(
             requireActivity() as BaseActivity,
