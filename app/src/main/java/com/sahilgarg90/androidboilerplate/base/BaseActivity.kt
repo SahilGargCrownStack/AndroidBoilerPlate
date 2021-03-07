@@ -19,6 +19,9 @@ import javax.inject.Inject
 
 /**
  * Created by Sahil Garg on 06-03-2021.
+ *
+ * This is the Base class to extend for each activity in the project.
+ * Currently it has code to implemented runtime permission handlers and dagger activity injection.
  */
 
 open class BaseActivity : AppCompatActivity(), HasAndroidInjector {

@@ -16,6 +16,9 @@ import javax.inject.Singleton
 
 /**
  * Created by Sahil Garg on 07-03-2021.
+ *
+ * This class is dagger module and is used to get Reference of the 'Main' screens related network
+ * call apis interface.
  */
 
 @Module

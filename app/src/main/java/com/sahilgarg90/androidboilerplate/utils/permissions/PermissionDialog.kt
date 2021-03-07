@@ -16,6 +16,8 @@ import com.sahilgarg90.androidboilerplate.databinding.DialogPermissionBinding
 
 /**
  * Created by Sahil Garg on 06-03-2021.
+ *
+ * This is a custom dialog class which will shows before asking user for a runtime permission.
  */
 
 class PermissionDialog(

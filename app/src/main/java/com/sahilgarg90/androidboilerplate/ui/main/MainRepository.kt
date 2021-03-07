@@ -8,6 +8,8 @@ import javax.inject.Inject
 
 /**
  * Created by Sahil Garg on 07-03-2021.
+ *
+ * This is a repository class used to fetch information from api and return the response to viewModels.
  */
 
 class MainRepository @Inject constructor(private val mainApi: MainApiImpl) {

@@ -6,6 +6,9 @@ import android.content.SharedPreferences
 
 /**
  * Created by Sahil Garg on 06-03-2021.
+ *
+ * This is the Base class of shared preference. It has all the base methods for storing all types
+ * of primitive data types.
  */
 
 abstract class BasePreferences protected constructor(prefName: String, application: Application) {

@@ -4,6 +4,8 @@ import javax.inject.Scope
 
 /**
  * Created by Sahil Garg on 06-03-2021.
+ *
+ * This class is holds the custom annotation made to be used in the project for dependency injection.
  */
 
 @MustBeDocumented

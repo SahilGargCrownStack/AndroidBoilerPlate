@@ -9,6 +9,8 @@ import dagger.multibindings.IntoMap
 
 /**
  * Created by Sahil Garg on 06-03-2021.
+ *
+ * This class is dagger module and is used to get Reference of the all the viewModels in the project.
  */
 
 @Module

@@ -6,6 +6,8 @@ import com.sahilgarg90.androidboilerplate.base.BaseActivity
 
 /**
  * Created by Sahil Garg on 06-03-2021.
+ *
+ * This class will manage all the callbacks related to runtime permissions.
  */
 
 class PermissionManager {

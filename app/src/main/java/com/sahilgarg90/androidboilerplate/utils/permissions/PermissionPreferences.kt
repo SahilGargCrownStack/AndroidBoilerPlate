@@ -7,6 +7,8 @@ import javax.inject.Singleton
 
 /**
  * Created by Sahil Garg on 06-03-2021.
+ *
+ * This is a Shared Preference class used to store information related to runtime permissions.
  */
 
 @Singleton

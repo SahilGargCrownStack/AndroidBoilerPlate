@@ -7,6 +7,9 @@ import javax.inject.Inject
 
 /**
  * Created by Sahil Garg on 07-03-2021.
+ *
+ * This interface will contain all the methods definitions used to get data from the api and will
+ * pass the processed information back to repositories.
  */
 
 class MainApiImpl @Inject constructor(private val mainNetworkAPI: MainNetworkAPI) : MainApi {
@@ -15,6 +18,7 @@ class MainApiImpl @Inject constructor(private val mainNetworkAPI: MainNetworkAPI
         return Single.just(mainRequest).flatMap { request ->
             mainNetworkAPI.getSomeData(request.id)
         }.map { response ->
+            // Here we can process the response received from the api before returning it.
             response.body()
         }
     }

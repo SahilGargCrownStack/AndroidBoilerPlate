@@ -10,6 +10,10 @@ import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.inject.Singleton;
 
+/**
+ * This class is a custom viewModel factory that is being used with dagger.
+ */
+
 @Singleton
 public class CustomViewModelFactory implements ViewModelProvider.Factory {
     private final Map<Class<? extends ViewModel>, Provider<ViewModel>> creators;

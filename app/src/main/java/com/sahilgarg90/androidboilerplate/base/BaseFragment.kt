@@ -6,6 +6,9 @@ import dagger.android.support.AndroidSupportInjection
 
 /**
  * Created by Sahil Garg on 06-03-2021.
+ *
+ * This is the Base class to extend for each fragment in the project.
+ * Currently it has code of dagger fragment injection.
  */
 
 open class BaseFragment : Fragment() {

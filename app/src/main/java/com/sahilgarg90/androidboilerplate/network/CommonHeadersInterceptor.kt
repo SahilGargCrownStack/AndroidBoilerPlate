@@ -8,7 +8,8 @@ import javax.inject.Inject
 /**
  * Created by Sahil Garg on 06-03-2021.
  *
- * Adds common headers like x-platform-code, x-version-code etc to the request.
+ * This class contains code which will add all the common headers which needs to be sent in every
+ * api call. Adds common headers like x-platform-code, x-version-code etc to the request.
  */
 
 class CommonHeadersInterceptor @Inject constructor() : Interceptor {

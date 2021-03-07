@@ -7,6 +7,8 @@ import com.sahilgarg90.androidboilerplate.R
 
 /**
  * Created by Sahil Garg on 06-03-2021.
+ *
+ * This class holds information related to a particular type of permission which user has to approve at runtime.
  */
 
 class Permission private constructor(

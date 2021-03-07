@@ -10,6 +10,9 @@ import javax.inject.Singleton
 
 /**
  * Created by Sahil Garg on 06-03-2021.
+ *
+ * This class is dagger component and which acts as main bridge between Modules and where they
+ * going to be Injected.
  */
 
 @Singleton
