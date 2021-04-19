@@ -11,6 +11,8 @@ Libraries and tools included:
 - [Retrofit 2](http://square.github.io/retrofit/)
 - [Dagger 2](http://google.github.io/dagger/)
 - [Chuck](https://github.com/jgilfelt/chuck/)
+- [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html)
+- [OK HTTP](https://github.com/square/okhttp)
 
 ## Requirements
 
@@ -50,3 +52,26 @@ To quickly start a new project from this boilerplate follow the next steps:
 * Create a new git repository.
 * Replace the example code with your app code following the same architecture.
 * Update README with information relevant to the new project.
+
+
+
+## Folder structure
+```
+├── base… Base classes to extend
+├── di… Dependency Injection Related files (e.g. Appcomponent, Main modules class, scopes)
+│   ├── network… DI Network Modules for each app section
+│   ├── subModules… DI sub modules for Activity/fragment/listeners
+│   └── repository… Implementation for Domain layer
+│       ├── datasource… Implement local and remote datasource
+│       └── storage… Share preferences data
+├── network… Implement network related classes
+│   ├── api… Contains API related classes for each app section
+├── ui… View Layer (Contains packages for each ui module)
+    ├── main (e.g. Main screen package)
+        ├── model… Contains data model classes for this module
+        └── viewmodel… Contains viewmodel class for this module
+└── utils… Utility functions every where in the app
+    ├── connectivity… Network Connection classes
+    ├── permissions… runtime Permission related classes
+
+```
