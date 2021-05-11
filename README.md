@@ -75,3 +75,61 @@ To quickly start a new project from this boilerplate follow the next steps:
     ├── permissions… runtime Permission related classes
 
 ```
+
+## Timeline
+
+```
+Total duration: 9-10 working days
+Pre-requites: 
+    Languages: Java, kotlin
+    Design Pattern: MVVM
+    Dependency Injection: Knowledge of DI (Dagger-2 is an advantage)
+    Network Call: Retrofit-2
+    JetPack: Navigation
+NOTE: 
+    Reference for Dagger2 
+        -> https://medium.com/@harivigneshjayapalan/dagger-2-for-android-beginners-dagger-2-part-i-f2de5564ab25
+        -> https://www.raywenderlich.com/262-dependency-injection-in-android-with-dagger-2-and-kotlin
+    Reference for Retrofit2
+        -> https://medium.com/android-news/manage-rest-api-with-okhttp3-retrofit2-gson-and-rxjava2-aa5bea1e8a92  
+DAY 1:
+-> Overview Project structure
+-> Look Gradle files and check about dependencies included and declarations
+-> Look AndroidManifest.xml file for permissions and application related components declarations.
+-> Learn about Base Files (How to write common code for View files and its usages)
+DAY 2:
+-> Revise what's DI and how it works imagining real life examples.
+-> AndroidApplication - Initialising Dagger
+-> Study - What is Module?
+DAY 3:
+-> Modules in App- AppModule, ActivityBuilderModule, NetworkModule and ViewModelModule
+-> AppComponent - Defining Modules
+DAY 4:
+-> Learn about Scopes/CustomScopes annotation in Dagger
+-> Learn few important annotations - Singleton, Provides, Inject 
+-> Evaluate setting up dagger files and understand more with syncing between files
+DAY 5:
+-> (Before moving to networking part - Revise Retrofit and Read again AuthModule and MainModule)
+-> Understand carefully '.../androidboilerplate/network' package how to arrange files
+-> Understand connection between MainApi, MainApiImpl and MainNetworksAPI
+DAY 6:
+-> Before moving to ui part, Revise below topics-
+-> MVVM design pattern and AndroidLifeCycle
+-> Navigation Component and Data-Binding
+-> Start understanding about 'ui.main' package
+DAY 7:
+-> Connect link between MainActivity, MainFragment, MainViewModel and MainRepository
+-> Defining fragment in Navigation graph '.../res/navigation/nav_main.xml'
+-> Declaring fragment view in '...res/layout/main_activity.xml'
+-> Design layout for fragment in '.../res/layout/main_fragment.xml'
+DAY 8:
+-> Look more files under 'utils' package
+-> Revise Broadcast Receiver and how it is used in project '.../utils/connectivity/ConnectivityBroadcastReceiver.kt'
+-> Study about permissions '.../utils/permissions'
+DAY 9:
+Lot of learning have done so far. Its time to perform some practical task. 
+-> Compile the project and run. If any error or exception logs in, try to solve it yourself taking help from google.
+-> Once project runs successfully, create more fragments/ activities and connect them with networking layer.
+DAY 10:
+Queries and Evaluation Day
+```
